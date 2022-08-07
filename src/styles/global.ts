@@ -10,7 +10,7 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
   body {
-    background: #f0f0f5 url(${pikachuBackground})no-repeat 70% top;
+    background: #d8d8dc url(${pikachuBackground})no-repeat 70% top;
     
     -webkit-font-smoothing: antialiased;
   }

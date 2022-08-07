@@ -1,5 +1,9 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { shade } from 'polished';
+
+interface FormProps {
+  hasError: boolean;
+}
 
 export const Title = styled.h1`
   font-size: 38px;
@@ -8,10 +12,11 @@ export const Title = styled.h1`
   line-height: 56px;
 `;
 
-export const Form = styled.form`
+export const Form = styled.form<FormProps>`
   margin-top: 40px;
   max-width: 700px;
   display: flex;
+
   input {
     flex: 1;
     height: 60px;
@@ -19,6 +24,15 @@ export const Form = styled.form`
     border: 0;
     border-radius: 5px 0 0 5px;
     color: #3a3a3a;
+    border: 2px solid #fff;
+    border-right: 0;
+
+    ${(props) =>
+      props.hasError &&
+      css`
+        border-color: #c53030;
+      `}
+
     &::placeholder {
       color: #a8a8b3;
     }
@@ -37,30 +51,47 @@ export const Form = styled.form`
     }
   }
 `;
+export const Error = styled.span`
+  display: block;
+  color: #c53030;
+  margin-top: 8px;
+  font-size: 12px;
+`;
 
-export const Grid = styled.div`
+export const ResultSearch = styled.div`
   margin-top: 50px;
   max-width: 700px;
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-  }
-  .content {
-    height: 140px;
+  a {
     background: #fff;
     border-radius: 5px;
-    margin: 5px;
-    padding: 5px;
+    width: 100%;
+    padding: 24px;
     display: block;
     text-decoration: none;
-    text-align: center;
+    display: flex;
+    align-items: center;
     transition: transform 0.2s;
     &:hover {
-      transform: translateX(2px);
+      transform: translateX(5px);
     }
-    strong {
-      color: #3d3d4d;
+    & + a {
+      margin-top: 10px;
+    }
+    img {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+    }
+    div {
+      margin-left: 16px;
+      strong {
+        font-size: 20px;
+        color: #3d3d4d;
+      }
+    }
+    svg {
+      margin-left: auto;
+      color: #cbcbd6;
     }
   }
 `;

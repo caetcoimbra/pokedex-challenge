@@ -52,8 +52,18 @@
         "avoidEscape": true,
         "allowTemplateLiterals": true
       }
-    ]
-  },
+    ],
+    "react/function-component-definition": [
+      1,
+      {
+        "namedComponents": ["function-declaration", "function-expression", "arrow-function", "function-declaration", "function-expression", "arrow-function"],
+        "unnamedComponents": ["function-expression", "arrow-function", "function-expression", "arrow-function"]
+}],
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"]
+      },
   "settings": {
     "import/resolver": {
       "typescript": { 

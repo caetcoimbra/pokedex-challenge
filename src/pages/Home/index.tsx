@@ -36,30 +36,32 @@ const Home: React.FC = () => {
     event.preventDefault();
 
     if (!newPokemon) {
-      setInputError('Digite o nome de um Pokemon!');
+      setInputError('Enter a pokémon name!');
       return;
     }
     try {
-      // eslint-disable-next-line no-shadow
+      // eslint-disable-next-line no-shadow, @typescript-eslint/no-shadow
       const pokemon: Pokemon = await getPokemon(newPokemon);
       setPokemon(pokemon);
       setNewPokemon('');
       setInputError('');
     } catch (err) {
-      setInputError('Erro na busca por esse Pokémon!');
+      setInputError('Error searching this pokémon!');
     }
   }
   return (
     <>
-      <img src={Pokeball} alt="Pokébola rolando" />
+      <a href="/">
+        <img src={Pokeball} alt="Pikachu and Diglett playing with a pokeball" />
+      </a>
       {/* eslint-disable-next-line react/jsx-no-bind */}
       <Form hasError={!!inputError} onSubmit={handleSearch}>
         <input
           value={newPokemon}
           onChange={(e) => setNewPokemon(e.target.value)}
-          placeholder="Digite o nome de um pokémon"
+          placeholder="What pokémon are you looking for?"
         />
-        <button type="submit">Pesquisar</button>
+        <button type="submit">Search</button>
       </Form>
 
       {inputError && <Error>{inputError}</Error>}
@@ -73,7 +75,7 @@ const Home: React.FC = () => {
             <div>
               <strong>
                 {pokemon.name.toUpperCase()} #
-                {pokemon.id.toString().padStart(3, '0')}
+                {pokemon.id.toString().padStart(4, '0')}
               </strong>
             </div>
             <FiChevronRight size={20} />

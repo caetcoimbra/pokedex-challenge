@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { Grid } from './styles';
 
@@ -9,12 +10,12 @@ function StyledGrid({ pokemons }: { pokemons: any }) {
       <div className="container">
         {pokemons.map((pokemon: any) => (
           <div className="content" key={pokemon.name}>
-            <a href="#top">
+            <Link to={`pokemon/${pokemon.name}`}>
               <img
                 src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`}
                 alt={pokemon.name}
               />
-            </a>
+            </Link>
             <div>
               <strong>{pokemon.name}</strong>
             </div>

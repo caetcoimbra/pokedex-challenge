@@ -40,14 +40,14 @@ export const Form = styled.form<FormProps>`
   button {
     width: 210px;
     height: 60px;
-    background: #ee6b2f;
+    background: #ee2f3e;
     border-radius: 0px 5px 5px 0px;
     border: 0;
     color: #fff;
     font-weight: bold;
     transition: background-color 0.2;
     &:hover {
-      background: ${shade(0.2, '#ee6b2f')};
+      background: ${shade(0.2, '#ff0000')};
     }
   }
 `;

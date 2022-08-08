@@ -7,6 +7,7 @@ export const Grid = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    opacity: 0.8;
   }
   .content {
     height: 140px;

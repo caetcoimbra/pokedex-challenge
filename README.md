@@ -1,46 +1,65 @@
-# Getting Started with Create React App
+<div align="center">
+  <img alt="pikachu and pokeball"  src="src/assets/pokeball.gif">
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h3 align="center">
+    Coding challenge based on Pokémon, my favorite childhood anime!
+    <br/>Made with ith ReactJs and TypScript 💻
+</h3>
+<p align="center">
+<img alt="repository size" src="https://img.shields.io/github/repo-size/caetcoimbra/pokedex-react" />
+<img alt="language size" src="https://img.shields.io/github/languages/count/kelwys/pokedex?color=blue" />
+<img alt="MIT license" src="https://img.shields.io/github/license/caetcoimbra/pokedex-react" />
+</p>
 
-## Available Scripts
+<p align="center">
+  <a href="#about-the-pokedex">About The Pokedex</a> |
+  <a href="#featurings">Featurings</a> |
+  <a href="#developer">Developer</a> |
+</p>
 
-In the project directory, you can run:
+<h2 id="about-the-pokedex" > 📑 About The Pokédex </h2>
 
-### `npm start`
+Search any Pokémon from Kanto Region in Pokédex and comment about any of them!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Developed with the intention of applying my Front-End knowledge!
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## ⚙ Running the code ⚡
 
-### `npm test`
+First, run the development server:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+# Clone Repository
+$ git clone https://github.com/caetcoimbra/pokedex-react.git
+# Go to server folder
+$ cd pokedex-react
+# Install Dependencies
+$ npm install
+# Run Aplication
+$ npm start
+# Access localhost
+http://localhost:3000
+```
+---
+<h2 id="featurings"> 💡 Featurings </h2>
 
-### `npm run build`
+These tools were used to build the Pokédex:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **[PokéAPI](https://pokeapi.co/)**
+- **[TypeScript](https://www.typescriptlang.org/)**
+- **[ReactJS](https://reactjs.org)**
+- **[Styled Components](https://styled-components.com/)**
+- **[Axios](https://github.com/axios/axios)**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
+<h2 id="developer"> 🧑🏼 Developer </h2>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<img alt="developer's photo" src="https://avatars.githubusercontent.com/u/85904036?v=4" width="150px;"/>
 
-### `npm run eject`
+<h3>Caetano Coimbra</h3>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+[![Linkedin Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&https://www.linkedin.com/in/caetano-coimbra-826b34192/)](https://www.linkedin.com/in/caetano-coimbra-826b34192/)
+[![Gmail Badge](https://img.shields.io/badge/-caetanocoimbra@gmail.com-4682B4?style=for-the-badge&logo=Gmail&logoColor=white&link=mailto:caetanocoimbra@gmail.com)](mailto:caetanocoimbra@gmail.com)
+---
+<h5>

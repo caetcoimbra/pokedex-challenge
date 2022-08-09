@@ -30,6 +30,8 @@
   ],
 
   "rules": {
+    "object-shorthand": ["error", "never"],
+    "no-console": "off",
     "prettier/prettier": "error",
     "react/jsx-one-expression-per-line": "off",
     "react-hooks/rules-of-hooks": "error",
@@ -56,17 +58,30 @@
     "react/function-component-definition": [
       1,
       {
-        "namedComponents": ["function-declaration", "function-expression", "arrow-function", "function-declaration", "function-expression", "arrow-function"],
-        "unnamedComponents": ["function-expression", "arrow-function", "function-expression", "arrow-function"]
-}],
+        "namedComponents": [
+          "function-declaration",
+          "function-expression",
+          "arrow-function",
+          "function-declaration",
+          "function-expression",
+          "arrow-function"
+        ],
+        "unnamedComponents": [
+          "function-expression",
+          "arrow-function",
+          "function-expression",
+          "arrow-function"
+        ]
+      }
+    ],
     "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": ["error"],
     "no-shadow": "off",
     "@typescript-eslint/no-shadow": ["error"]
-      },
+  },
   "settings": {
     "import/resolver": {
-      "typescript": { 
+      "typescript": {
         "alwaysTryTypes": true
       }
     },

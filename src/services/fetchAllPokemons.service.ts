@@ -20,7 +20,5 @@ export const getPokemon = async (newPokemon: any) => {
   });
   data.description =
     description > 0 ? species.flavor_text_entries[description].flavor_text : '';
-  // eslint-disable-next-line no-console
-  console.log(data);
   return data;
 };

@@ -4,6 +4,8 @@ import { Link, useParams } from 'react-router-dom';
 import { FiChevronLeft } from 'react-icons/fi';
 import { getPokemon } from '../../services/fetchAllPokemons.service';
 import Stats from '../../components/Stats';
+import CommentForm from '../../components/CommentForm';
+import CommentList from '../../components/CommentList';
 
 import Pokeball from '../../assets/pokeball.gif';
 
@@ -83,6 +85,8 @@ const PokemonPage: React.FC = () => {
             </li>
           </ul>
           <Stats stats={pokemon.stats} />
+          <CommentForm pokemon={pokemon} />
+          <CommentList pokemon={pokemon} />
         </PokemonInfo>
       )}
     </>

@@ -18,10 +18,6 @@ export const StyledName = styled.div`
     color: #5d5d5d;
 `;
 
-export const StyledMail = styled.div`
-    color: #5d5d5d;
-`;
-
 export const StyledMessage = styled.div`
   color: #5d5d5d;
 `;

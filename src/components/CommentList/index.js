@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../../services/firebase';
 import {
-  CommentListDiv, StyledName, StyledMail, StyledMessage,
+  CommentListDiv, StyledName, StyledMessage,
 } from './styles';
 
 function CommentList(props) {
@@ -36,11 +36,6 @@ function CommentList(props) {
               {' '}
               {comment.name}
             </StyledName>
-            <StyledMail>
-              <h4>E-Mail:</h4>
-              {' '}
-              {comment.email}
-            </StyledMail>
             <StyledMessage>
               <h4>Comment:</h4>
               {' '}

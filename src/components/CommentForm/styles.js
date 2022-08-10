@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { shade } from 'polished';
 
-export const CommentFormDiv = styled.div`
+const CommentFormDiv = styled.div`
   margin-top: 20px;
   max-width: 700px;
   display: flex;
@@ -48,3 +48,5 @@ export const CommentFormDiv = styled.div`
       color: #a8a8b3;
     }
 `;
+
+export default CommentFormDiv;

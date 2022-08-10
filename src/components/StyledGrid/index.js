@@ -1,14 +1,13 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Grid from './styles';
 
-import { Grid } from './styles';
-
-function StyledGrid({ pokemons }: { pokemons: any }) {
+function StyledGrid({ pokemons }) {
   return (
     <Grid>
       <div className="container">
-        {pokemons.map((pokemon: any) => (
+        {pokemons.map((pokemon) => (
           <div className="content" key={pokemon.name}>
             <Link to={`pokemon/${pokemon.name}`}>
               <img

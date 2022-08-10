@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Table = styled.table`
+const Table = styled.table`
   caption-side: top;
   border: none;
   border-collapse: collapse;
@@ -23,3 +23,5 @@ export const Table = styled.table`
     border: none;
   }
 `;
+
+export default Table;

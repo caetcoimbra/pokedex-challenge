@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Grid = styled.div`
+const Grid = styled.div`
   margin-top: 50px;
   max-width: 700px;
   .container {
@@ -27,3 +27,5 @@ export const Grid = styled.div`
     }
   }
 `;
+
+export default Grid;

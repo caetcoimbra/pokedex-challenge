@@ -46,9 +46,7 @@ http://localhost:3000
 These tools were used to build the Pokédex:
 
 - **[PokéAPI](https://pokeapi.co/)**
-- **[TypeScript](https://www.typescriptlang.org/)**
 - **[ReactJS](https://reactjs.org)**
-- **[Styled Components](https://styled-components.com/)**
 - **[Axios](https://github.com/axios/axios)**
 
 ---

@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-shadow */
+/* eslint-disable no-shadow */
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { FiChevronLeft } from 'react-icons/fi';
@@ -11,27 +11,10 @@ import Pokeball from '../../assets/pokeball.gif';
 
 import { Header, PokemonInfo } from './styles';
 
-interface Pokemon {
-  id: number;
-  name: string;
-  description: string;
-  height: number;
-  weight: number;
-  base_experience: number;
-  types: Array<Type>;
-  stats: Array<Stat>;
-}
+function PokemonPage() {
+  const [pokemon, setPokemon] = useState(null);
+  const [comments, setAllComments] = useState([]);
 
-interface Type {
-  type: { name: string };
-}
-
-interface Stat {
-  type: { name: string };
-}
-
-const PokemonPage: React.FC = () => {
-  const [pokemon, setPokemon] = useState<Pokemon | null>(null);
   const { pokemon: pokemonParam } = useParams();
 
   useEffect(() => {
@@ -42,6 +25,11 @@ const PokemonPage: React.FC = () => {
     loadPokemon();
   }, [pokemonParam]);
 
+  const commentProps = {
+    comments,
+    setAllComments,
+    pokemon,
+  };
   return (
     <>
       <Header>
@@ -61,10 +49,12 @@ const PokemonPage: React.FC = () => {
             />
             <div>
               <strong>
-                {pokemon.name.toUpperCase()} #
-                {pokemon.id.toString().padStart(3, '0')}
+                {pokemon.name?.toUpperCase()}
+                {' '}
+                #
+                {pokemon.id?.toString().padStart(3, '0')}
               </strong>
-              {pokemon.types.map((type) => (
+              {pokemon?.types.map((type) => (
                 <span key={pokemon.id}>{type.type.name.toUpperCase()}</span>
               ))}
               <p>{pokemon.description}</p>
@@ -72,25 +62,33 @@ const PokemonPage: React.FC = () => {
           </header>
           <ul>
             <li>
-              <strong>{pokemon.height}m</strong>
+              <strong>
+                {pokemon.height}
+              </strong>
               <span>Height</span>
             </li>
             <li>
-              <strong>{pokemon.weight}kg</strong>
+              <strong>
+                {pokemon.weight}
+                kg
+              </strong>
               <span>Weight</span>
             </li>
             <li>
-              <strong>{pokemon.base_experience}xp</strong>
+              <strong>
+                {pokemon.base_experience}
+                xp
+              </strong>
               <span>Base XP</span>
             </li>
           </ul>
           <Stats stats={pokemon.stats} />
-          <CommentForm pokemon={pokemon} />
-          <CommentList pokemon={pokemon} />
+          <CommentForm commentProps={commentProps} />
+          <CommentList commentProps={commentProps} />
         </PokemonInfo>
       )}
     </>
   );
-};
+}
 
 export default PokemonPage;

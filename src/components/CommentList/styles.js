@@ -12,3 +12,19 @@ export const CommentListDiv = styled.div`
     margin-bottom: 10px;
   }
 `;
+
+export const StyledName = styled.div`
+  h3 {
+    color: #3d3d4d;
+  }
+`;
+
+export const StyledMail = styled.div`
+  h3 {
+    color: #3d3d4d;
+  }
+`;
+
+export const StyledMessage = styled.div`
+
+`;

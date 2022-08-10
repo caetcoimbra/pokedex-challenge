@@ -1,30 +1,31 @@
-import React, { FormEvent, useState } from 'react';
+/* eslint-disable react/destructuring-assignment */
+import React, { useState } from 'react';
 import { collection, addDoc } from 'firebase/firestore';
-import { CommentFormDiv } from './styles';
+import CommentFormDiv from './styles';
 import { db } from '../../services/firebase';
 
-const CommentForm = ({ pokemon }: { pokemon: any }) => {
+function CommentForm(props) {
+  const { pokemon, setAllComments } = props.commentProps;
   const [email, setNewEmail] = useState('');
   const [name, setNewName] = useState('');
   const [message, setNewMessage] = useState('');
 
-  async function handleSubmit(
-    event: FormEvent<HTMLFormElement>
-  ): Promise<void> {
+  async function handleSubmit(event) {
+    setAllComments((prevState) => [...prevState, { name, email, message }]);
     event.preventDefault();
 
     try {
-      const docRef = await addDoc(collection(db, `comments-${pokemon.id}`), {
-        email: email,
-        name: name,
-        message: message
+      const docRef = await addDoc(collection(db, `comments-${pokemon?.name}`), {
+        email,
+        name,
+        message,
       });
 
       setNewEmail('');
       setNewName('');
       setNewMessage('');
       console.log('Document written with ID: ', docRef.id);
-    } catch (error: any) {
+    } catch (error) {
       throw new Error(error);
     }
   }
@@ -32,7 +33,10 @@ const CommentForm = ({ pokemon }: { pokemon: any }) => {
   return (
     <div>
       <CommentFormDiv>
-        <h1>Comment about {pokemon.name}</h1>
+        <h1>
+          Comment about
+          {pokemon?.name}
+        </h1>
         <form onSubmit={handleSubmit}>
           <input
             id="email"
@@ -70,6 +74,6 @@ const CommentForm = ({ pokemon }: { pokemon: any }) => {
       </CommentFormDiv>
     </div>
   );
-};
+}
 
 export default CommentForm;

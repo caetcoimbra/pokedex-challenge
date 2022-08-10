@@ -1,12 +1,12 @@
 import React from 'react';
-import { Table } from './styles';
+import Table from './styles';
 
-const Stats = ({ stats }: any) => {
+function Stats({ stats }) {
   return (
     <div>
       <Table>
         <h1> Stats</h1>
-        {stats.map((i: any, index: any) => (
+        {stats.map((i, index) => (
           // eslint-disable-next-line react/no-array-index-key
           <tr key={index}>
             <td>{i.stat.name.split('-').join(' ')}</td>
@@ -16,6 +16,6 @@ const Stats = ({ stats }: any) => {
       </Table>
     </div>
   );
-};
+}
 
 export default Stats;

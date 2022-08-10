@@ -1,27 +1,23 @@
+/* eslint-disable no-shadow */
 /* eslint-disable react/function-component-definition */
-import React, { FormEvent, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FiChevronRight } from 'react-icons/fi';
 import {
   getAllPokemons,
-  getPokemon
+  getPokemon,
 } from '../../services/fetchAllPokemons.service';
 import { Form, Error, ResultSearch } from './styles';
 import Pokeball from '../../assets/pokeball.gif';
 import StyledGrid from '../../components/StyledGrid';
 
-interface Pokemon {
-  id: number;
-  name: string;
-}
-
-const Home: React.FC = () => {
-  const [pokemon, setPokemon] = useState<Pokemon>();
-  const [pokemons, setPokemons] = useState<Pokemon[]>([]);
+const Home = () => {
+  const [pokemon, setPokemon] = useState('');
+  const [pokemons, setPokemons] = useState([]);
   const [newPokemon, setNewPokemon] = useState('');
   const [inputError, setInputError] = useState('');
 
-  const loadAllPokemons = async (): Promise<any> => {
+  const loadAllPokemons = async () => {
     const allPokemons = await getAllPokemons();
     return setPokemons(allPokemons);
   };
@@ -30,9 +26,7 @@ const Home: React.FC = () => {
     loadAllPokemons();
   }, []);
 
-  async function handleSearch(
-    event: FormEvent<HTMLFormElement>
-  ): Promise<void> {
+  async function handleSearch(event) {
     event.preventDefault();
 
     if (!newPokemon) {
@@ -40,8 +34,7 @@ const Home: React.FC = () => {
       return;
     }
     try {
-      // eslint-disable-next-line no-shadow, @typescript-eslint/no-shadow
-      const pokemon: Pokemon = await getPokemon(newPokemon);
+      const pokemon = await getPokemon(newPokemon);
       setPokemon(pokemon);
       setNewPokemon('');
       setInputError('');
@@ -74,8 +67,10 @@ const Home: React.FC = () => {
             />
             <div>
               <strong>
-                {pokemon.name.toUpperCase()} #
-                {pokemon.id.toString().padStart(4, '0')}
+                {pokemon.name?.toUpperCase()}
+                {' '}
+                #
+                {pokemon.id?.toString().padStart(4, '0')}
               </strong>
             </div>
             <FiChevronRight size={20} />

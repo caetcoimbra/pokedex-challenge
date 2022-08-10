@@ -65,8 +65,6 @@ function CommentForm(props) {
             name="avaliacao"
             value={message}
             onChange={(e) => setNewMessage(e.target.value)}
-            rows={8}
-            cols={40}
             required
           />
           <br />

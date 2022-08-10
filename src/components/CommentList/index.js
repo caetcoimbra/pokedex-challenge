@@ -29,17 +29,20 @@ function CommentList(props) {
       </h1>
       {comments.map((comment) => (
         <div>
-          <hr />
           <CommentListDiv>
             <StyledName>
-              <h4>Name</h4>
-              {' '}
-              {comment.name}
+              <h4>
+                Name:
+                {' '}
+                {comment.name}
+              </h4>
             </StyledName>
             <StyledMessage>
-              <h4>Comment:</h4>
-              {' '}
-              {comment.message}
+              <h4>
+                Comment:
+                {' '}
+                {comment.message}
+              </h4>
             </StyledMessage>
           </CommentListDiv>
         </div>

@@ -43,6 +43,9 @@ const CommentFormDiv = styled.div`
     border-radius: 5px;
     border: 2px solid whitesmoke;
     margin-bottom: 5px;
+    width: 357px;
+    height: 130px;
+}
 
     &::placeholder {
       color: #a8a8b3;

@@ -85,6 +85,7 @@ function PokemonPage() {
           <Stats stats={pokemon.stats} />
           <CommentForm commentProps={commentProps} />
           <br />
+          <hr />
           <CommentList commentProps={commentProps} />
         </PokemonInfo>
       )}

@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-import pikachuBackground from '../assets/pikachuBackground.png';
+import pikachuBackgroundWhite from '../assets/pikachuBackgroundWhite.png';
 
 export default createGlobalStyle`
   * {
@@ -10,7 +10,7 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
   body {
-    background: #d8d8dc url(${pikachuBackground})repeat-y 70% top;
+    background: #B1B1B1 url(${pikachuBackgroundWhite})repeat-y 70% top;
     
     -webkit-font-smoothing: antialiased;
   }

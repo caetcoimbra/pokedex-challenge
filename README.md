@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <a href="#about-the-pokedex">About The Pokedex</a> |
+  <a href="#about-the-pokedex">About the Pokedex</a> |
   <a href="#featurings">Featurings</a> |
   <a href="#developer">Developer</a> |
 </p>

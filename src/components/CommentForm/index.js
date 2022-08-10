@@ -34,7 +34,8 @@ function CommentForm(props) {
     <div>
       <CommentFormDiv>
         <h1>
-          Comment about
+          Write your comment about
+          {' '}
           {pokemon?.name}
         </h1>
         <form onSubmit={handleSubmit}>

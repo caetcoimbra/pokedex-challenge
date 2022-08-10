@@ -26,7 +26,8 @@ const CommentFormDiv = styled.div`
     }
   }
   button {
-    width: 210px;
+    margin-left: 90px;
+    width: 150px;
     height: 60px;
     background: #ff0000;
     border-radius: 5px;

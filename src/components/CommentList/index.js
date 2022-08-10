@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../../services/firebase';
 import {
-  CommentListDiv, StyledName, StyledMessage,
+  CommentListDiv, StyledName, StyledMessage, StyledTitle,
 } from './styles';
 
 function CommentList(props) {
@@ -22,11 +22,11 @@ function CommentList(props) {
 
   return (
     <span>
-      <h1>
+      <StyledTitle>
         Comments about
         {' '}
         {pokemon?.name}
-      </h1>
+      </StyledTitle>
       {comments.map((comment) => (
         <div>
           <CommentListDiv>
@@ -37,6 +37,7 @@ function CommentList(props) {
                 {comment.name}
               </h4>
             </StyledName>
+            <br />
             <StyledMessage>
               <h4>
                 Comment:
@@ -47,7 +48,6 @@ function CommentList(props) {
           </CommentListDiv>
         </div>
       ))}
-      <hr />
     </span>
   );
 }

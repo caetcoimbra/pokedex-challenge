@@ -8,7 +8,7 @@ function StyledGrid({ pokemons }) {
     <Grid>
       <div className="container">
         {pokemons.map((pokemon) => (
-          <div className="content" key={pokemon.name}>
+          <div className="content" key={pokemon.name} data-testid="pokemon-div">
             <Link to={`pokemon/${pokemon.name}`}>
               <img
                 src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`}
@@ -16,7 +16,7 @@ function StyledGrid({ pokemons }) {
               />
             </Link>
             <div>
-              <strong>{pokemon.name}</strong>
+              <strong data-testid={pokemon.name}>{pokemon.name}</strong>
             </div>
           </div>
         ))}

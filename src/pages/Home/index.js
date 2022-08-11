@@ -54,12 +54,12 @@ const Home = () => {
           onChange={(e) => setNewPokemon(e.target.value)}
           placeholder="What pokémon are you looking for?"
         />
-        <button type="submit">Search</button>
+        <button type="submit" data-testid="search-button">Search</button>
       </Form>
 
       {inputError && <Error>{inputError}</Error>}
       {pokemon ? (
-        <ResultSearch>
+        <ResultSearch data-testid={`div-result-${pokemon.name}`}>
           <Link key={pokemon.name} to={`/pokemon/${pokemon.name}`}>
             <img
               src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`}

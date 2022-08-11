@@ -4,7 +4,7 @@
 
 <h3 align="center">
     Coding challenge based on Pokémon, my favorite childhood anime!
-    <br/>Made with ith ReactJs and TypScript 💻
+    <br/>Made with ith ReactJs and tested with React Testing Library 💻
 </h3>
 <p align="center">
 <img alt="repository size" src="https://img.shields.io/github/repo-size/caetcoimbra/pokedex-react" />
@@ -48,6 +48,7 @@ These tools were used to build the Pokédex:
 - **[PokéAPI](https://pokeapi.co/)**
 - **[ReactJS](https://reactjs.org)**
 - **[Axios](https://github.com/axios/axios)**
+- **[React Testing Library](https://testing-library.com/)**
 
 ---
 <h2 id="developer"> 🧑🏼 Developer </h2>

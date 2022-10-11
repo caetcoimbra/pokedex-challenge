@@ -8,7 +8,7 @@
 </h3>
 <p align="center">
 <img alt="repository size" src="https://img.shields.io/github/repo-size/caetcoimbra/pokedex-react" />
-<img alt="language size" src="https://img.shields.io/github/languages/count/kelwys/pokedex?color=blue" />
+<img alt="language size" src="https://img.shields.io/github/languages/count/caetcoimbra/pokedex-react?color=blue" />
 <img alt="MIT license" src="https://img.shields.io/github/license/caetcoimbra/pokedex-react" />
 </p>
 
